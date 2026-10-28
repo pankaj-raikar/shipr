@@ -1,0 +1,9 @@
+.env
+**/node_modules
+**/dist
+**/output
+.DS_Store
+*.tsbuildinfo
+.agents
+.claude
+skills-lock.json

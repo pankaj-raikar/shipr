@@ -17,7 +17,7 @@ export default function LandingFooter() {
     >
       <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="#C084FC" stroke="#C084FC" />
+          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="#10B981" stroke="#10B981" />
         </svg>
         <span style={{ fontFamily: "var(--font-mono)", fontWeight: 500, fontSize: 14 }}>Shipr</span>
         <span style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--text-faint)", marginLeft: 16 }}>

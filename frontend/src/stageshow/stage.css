@@ -63,7 +63,7 @@
     --ss-warning-soft: rgba(245, 158, 11, 0.14);
     --ss-warning-text: #b45309;
     /* A second accent stop, for gradient meters and lines */
-    --ss-accent-2: #8b5cf6;
+    --ss-accent-2: #34d399;
     /* The accent as text (a link, a selected label). Darkened so it reads on
        white; a custom accent gets the same treatment automatically */
     --ss-accent-text: color-mix(in srgb, var(--ss-accent) 82%, #000);

@@ -56,15 +56,15 @@ export default function ShiprStageShow() {
 
   const terminalLines = [
     { text: "$ shipr deploy --repo https://github.com/pankaj-raikar/saas-dashboard", color: "#a1a1aa", step: 0 },
-    { text: "  ✦ [ingest] Shallow cloning repository (depth=1)... done in 1.1s", color: "#c084fc", step: 0 },
-    { text: "  ✦ [storage] Syncing source code to Cloudflare R2 bucket...", color: "#c084fc", step: 1 },
-    { text: "  ✦ [queue] Enqueued job 'a8f10e' into Redis build-queue", color: "#818cf8", step: 2 },
+    { text: "  ✦ [ingest] Shallow cloning repository (depth=1)... done in 1.1s", color: "#10b981", step: 0 },
+    { text: "  ✦ [storage] Syncing source code to Cloudflare R2 bucket...", color: "#10b981", step: 1 },
+    { text: "  ✦ [queue] Enqueued job 'a8f10e' into Redis build-queue", color: "#34d399", step: 2 },
     { text: "  ✦ [worker-02] Worker picked up job 'a8f10e'", color: "#38bdf8", step: 3 },
     { text: "  ✦ [worker-02] Executing: npm install && npm run build", color: "#38bdf8", step: 3 },
     { text: "  │  ✓ Built in 412ms | dist/index.html (0.5KB) | dist/assets/index.js (184KB)", color: "#a1a1aa", step: 3 },
-    { text: "  ✦ [publish] Copying compiled artifacts to production bucket...", color: "#c084fc", step: 4 },
-    { text: "  ✓ [ready] Deployment successful! Subdomain mapped to edge router.", color: "#4ade80", step: 4 },
-    { text: "  ↗ Live Sandbox: https://a8f10e.shipr.live", color: "#4ade80", step: 4 }
+    { text: "  ✦ [publish] Copying compiled artifacts to production bucket...", color: "#10b981", step: 4 },
+    { text: "  ✓ [ready] Deployment successful! Subdomain mapped to edge router.", color: "#10b981", step: 4 },
+    { text: "  ↗ Live Sandbox: https://a8f10e.shipr.live", color: "#10b981", step: 4 }
   ];
 
   useEffect(() => {
@@ -82,11 +82,11 @@ export default function ShiprStageShow() {
         style={{
           position: "absolute",
           inset: "-1px",
-          background: "linear-gradient(135deg, rgba(192, 132, 252, 0.25), rgba(56, 189, 248, 0.15), rgba(0, 0, 0, 0))",
+          background: "linear-gradient(135deg, rgba(16, 185, 129, 0.3), rgba(56, 189, 248, 0.15), rgba(0, 0, 0, 0))",
           borderRadius: "14px",
           filter: "blur(8px)",
           pointerEvents: "none",
-          opacity: 0.6
+          opacity: 0.65
         }}
       />
 
@@ -94,9 +94,9 @@ export default function ShiprStageShow() {
         url="app.shipr.live/deployments/a8f10e"
         className="shipr-stageshow-window"
         style={{
-          background: "#0c0d12",
+          background: "#080a0b",
           border: "1px solid rgba(255, 255, 255, 0.08)",
-          boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.7)"
+          boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.85)"
         }}
       >
         <div style={{ display: "flex", flexDirection: "column", minHeight: "360px" }}>
@@ -124,8 +124,8 @@ export default function ShiprStageShow() {
                   fontFamily: "var(--font-mono, monospace)",
                   border: "none",
                   cursor: "pointer",
-                  background: activeTab === "terminal" ? "rgba(192, 132, 252, 0.18)" : "transparent",
-                  color: activeTab === "terminal" ? "#c084fc" : "#a1a1aa",
+                  background: activeTab === "terminal" ? "rgba(16, 185, 129, 0.18)" : "transparent",
+                  color: activeTab === "terminal" ? "#10b981" : "#a1a1aa",
                   transition: "all 0.2s"
                 }}
               >
@@ -140,8 +140,8 @@ export default function ShiprStageShow() {
                   fontFamily: "var(--font-mono, monospace)",
                   border: "none",
                   cursor: "pointer",
-                  background: activeTab === "preview" ? "rgba(74, 222, 128, 0.18)" : "transparent",
-                  color: activeTab === "preview" ? "#4ade80" : "#a1a1aa",
+                  background: activeTab === "preview" ? "rgba(16, 185, 129, 0.18)" : "transparent",
+                  color: activeTab === "preview" ? "#10b981" : "#a1a1aa",
                   transition: "all 0.2s"
                 }}
               >
@@ -217,7 +217,7 @@ export default function ShiprStageShow() {
                       ))}
                     {stepIndex < 4 && (
                       <div style={{ display: "flex", alignItems: "center", gap: 6, marginTop: 4 }}>
-                        <Spinner style={{ width: 12, height: 12, color: "#c084fc" }} />
+                        <Spinner style={{ width: 12, height: 12, color: "#10b981" }} />
                         <span style={{ color: "#71717a", fontSize: "11px" }}>Processing step {stepIndex + 1} of 5...</span>
                       </div>
                     )}
@@ -235,7 +235,7 @@ export default function ShiprStageShow() {
                       height: "100%",
                       borderRadius: "8px",
                       border: "1px solid rgba(255, 255, 255, 0.08)",
-                      background: "#12131a",
+                      background: "#0e1113",
                       padding: "16px",
                       display: "flex",
                       flexDirection: "column",
@@ -247,7 +247,7 @@ export default function ShiprStageShow() {
                         <span style={{ fontSize: "11px", color: "#a1a1aa", fontFamily: "var(--font-mono, monospace)" }}>
                           HTTPS // TLS 1.3 // Edge Cached
                         </span>
-                        <span style={{ fontSize: "11px", color: "#4ade80", background: "rgba(74, 222, 128, 0.12)", padding: "2px 6px", borderRadius: "4px" }}>
+                        <span style={{ fontSize: "11px", color: "#10b981", background: "rgba(16, 185, 129, 0.12)", padding: "2px 6px", borderRadius: "4px" }}>
                           HTTP 200 OK (14ms)
                         </span>
                       </div>
@@ -264,7 +264,7 @@ export default function ShiprStageShow() {
                         </div>
                         <div style={{ padding: "10px", borderRadius: "6px", background: "rgba(255, 255, 255, 0.03)", border: "1px solid rgba(255, 255, 255, 0.05)" }}>
                           <div style={{ fontSize: "10px", color: "#71717a" }}>EDGE LATENCY</div>
-                          <div style={{ fontSize: "18px", fontWeight: 700, color: "#4ade80" }}>18ms</div>
+                          <div style={{ fontSize: "18px", fontWeight: 700, color: "#10b981" }}>18ms</div>
                         </div>
                       </div>
                     </div>
@@ -277,7 +277,7 @@ export default function ShiprStageShow() {
                         textAlign: "center",
                         padding: "8px",
                         borderRadius: "6px",
-                        background: "#c084fc",
+                        background: "#10b981",
                         color: "#000",
                         fontSize: "12px",
                         fontWeight: 600,
@@ -300,11 +300,11 @@ export default function ShiprStageShow() {
                     style={{ display: "flex", flexDirection: "column", gap: 10, fontSize: "12px" }}
                   >
                     <div style={{ padding: "10px", borderRadius: "6px", background: "rgba(255, 255, 255, 0.03)", border: "1px solid rgba(255, 255, 255, 0.06)" }}>
-                      <div style={{ color: "#c084fc", fontWeight: 600, marginBottom: 2 }}>Upload Service (Port 3000)</div>
+                      <div style={{ color: "#10b981", fontWeight: 600, marginBottom: 2 }}>Upload Service (Port 3000)</div>
                       <div style={{ color: "#a1a1aa", fontSize: "11px" }}>Shallow Git clone & uploads source files to storage</div>
                     </div>
                     <div style={{ padding: "10px", borderRadius: "6px", background: "rgba(255, 255, 255, 0.03)", border: "1px solid rgba(255, 255, 255, 0.06)" }}>
-                      <div style={{ color: "#818cf8", fontWeight: 600, marginBottom: 2 }}>Redis 7.0 Queue & Cache</div>
+                      <div style={{ color: "#34d399", fontWeight: 600, marginBottom: 2 }}>Redis 7.0 Queue & Cache</div>
                       <div style={{ color: "#a1a1aa", fontSize: "11px" }}>Job ID queue (LPUSH/BRPOP) & live log buffer with 1h TTL</div>
                     </div>
                     <div style={{ padding: "10px", borderRadius: "6px", background: "rgba(255, 255, 255, 0.03)", border: "1px solid rgba(255, 255, 255, 0.06)" }}>
@@ -312,7 +312,7 @@ export default function ShiprStageShow() {
                       <div style={{ color: "#a1a1aa", fontSize: "11px" }}>Spawns subprocess build runner and pushes dist/ to R2</div>
                     </div>
                     <div style={{ padding: "10px", borderRadius: "6px", background: "rgba(255, 255, 255, 0.03)", border: "1px solid rgba(255, 255, 255, 0.06)" }}>
-                      <div style={{ color: "#4ade80", fontWeight: 600, marginBottom: 2 }}>Request Router (Port 3001)</div>
+                      <div style={{ color: "#10b981", fontWeight: 600, marginBottom: 2 }}>Request Router (Port 3001)</div>
                       <div style={{ color: "#a1a1aa", fontSize: "11px" }}>Wildcard subdomain parser streaming static files directly</div>
                     </div>
                   </motion.div>
@@ -321,7 +321,7 @@ export default function ShiprStageShow() {
             </div>
 
             {/* Right Column: Interactive Pipeline Steps */}
-            <div style={{ padding: "16px", background: "rgba(0, 0, 0, 0.2)", display: "flex", flexDirection: "column", gap: 10 }}>
+            <div style={{ padding: "16px", background: "rgba(0, 0, 0, 0.25)", display: "flex", flexDirection: "column", gap: 10 }}>
               <div style={{ fontSize: "11px", letterSpacing: "0.12em", textTransform: "uppercase", color: "#71717a", fontFamily: "var(--font-mono, monospace)" }}>
                 Pipeline Progress
               </div>
@@ -337,8 +337,8 @@ export default function ShiprStageShow() {
                       padding: "10px 12px",
                       borderRadius: "6px",
                       cursor: "pointer",
-                      border: idx === stepIndex ? "1px solid rgba(192, 132, 252, 0.4)" : "1px solid rgba(255, 255, 255, 0.04)",
-                      background: idx === stepIndex ? "rgba(192, 132, 252, 0.08)" : "rgba(255, 255, 255, 0.015)",
+                      border: idx === stepIndex ? "1px solid rgba(16, 185, 129, 0.45)" : "1px solid rgba(255, 255, 255, 0.04)",
+                      background: idx === stepIndex ? "rgba(16, 185, 129, 0.1)" : "rgba(255, 255, 255, 0.015)",
                       transition: "all 0.2s"
                     }}
                   >
@@ -349,7 +349,7 @@ export default function ShiprStageShow() {
                             width: "7px",
                             height: "7px",
                             borderRadius: "50%",
-                            background: step.status === "completed" ? "#4ade80" : step.status === "running" ? "#c084fc" : "#52525b"
+                            background: step.status === "completed" ? "#10b981" : step.status === "running" ? "#34d399" : "#52525b"
                           }}
                         />
                         <span style={{ fontSize: "12px", fontWeight: 500, color: idx === stepIndex ? "#fff" : "#a1a1aa" }}>

@@ -2,19 +2,19 @@
 
 @layer stageshow {
   .ss-code {
-    --ss-code-key: #7c3aed;
+    --ss-code-key: #059669;
     --ss-code-str: #15803d;
     --ss-code-num: #b45309;
-    --ss-code-fn: #2563eb;
+    --ss-code-fn: #0284c7;
     font: 11.5px/19px ui-monospace, 'SF Mono', Menlo, monospace;
     color: var(--ss-text-strong);
   }
 
   .ss-stage[data-theme="dark"] .ss-code {
-    --ss-code-key: #c4b5fd;
-    --ss-code-str: #86efac;
-    --ss-code-num: #fdba74;
-    --ss-code-fn: #93c5fd;
+    --ss-code-key: #6ee7b7;
+    --ss-code-str: #a7f3d0;
+    --ss-code-num: #fde047;
+    --ss-code-fn: #38bdf8;
   }
 
   .ss-stage[data-palette="mono"] .ss-code,

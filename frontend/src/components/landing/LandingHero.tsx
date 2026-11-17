@@ -161,7 +161,7 @@ export default function LandingHero() {
                 gap: 8,
                 border: "none",
                 borderRadius: 6,
-                boxShadow: "0 32px 64px -16px #0006, 0 16px 32px -8px #0006, 0 8px 16px -4px #0004, 0 4px 8px -2px #0004, 0 -8px 16px -1px #0003, 0 2px 4px -1px #0004, inset 0 0 0 1px #e58efa14, inset 0 1px rgba(200, 153, 248, 0.94)",
+                boxShadow: "0 32px 64px -16px #0006, 0 16px 32px -8px #0006, 0 8px 16px -4px #0004, 0 4px 8px -2px #0004, 0 -8px 16px -1px #0003, 0 2px 4px -1px #0004, inset 0 0 0 1px rgba(16, 185, 129, 0.2), inset 0 1px rgba(52, 211, 153, 0.8)",
                 background: "var(--primary)",
                 padding: "12px 24px",
                 fontSize: 14,
@@ -172,11 +172,11 @@ export default function LandingHero() {
                 transition: "all 0.2s ease",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.background = "#ac6ef4";
+                e.currentTarget.style.background = "#059669";
                 e.currentTarget.style.transform = "translateY(-2px)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.background = "#b781f5ff";
+                e.currentTarget.style.background = "var(--primary)";
                 e.currentTarget.style.transform = "none";
               }}
             >

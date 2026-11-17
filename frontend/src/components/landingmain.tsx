@@ -68,7 +68,7 @@ export default function ShiprLanding() {
           <div style={{ position: "absolute", inset: 0, zIndex: 0, pointerEvents: "none" }}>
 
             <ColorBends
-              colors={["#A855F7", "#8a5cff"]}
+              colors={["#10B981", "#059669"]}
               rotation={90}
               speed={0.2}
               scale={1}
@@ -82,7 +82,6 @@ export default function ShiprLanding() {
               bandWidth={6}
               transparent
               autoRotate={0}
-
             />
             <DotField
               dotRadius={1.5}
@@ -94,9 +93,9 @@ export default function ShiprLanding() {
               cursorRadius={500}
               cursorForce={0.1}
               bulgeOnly
-              gradientFrom="#A855F7"
-              gradientTo="#B497CF"
-              glowColor="#120F17"
+              gradientFrom="#10B981"
+              gradientTo="#047857"
+              glowColor="#080A0B"
             />
 
 
